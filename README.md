@@ -109,23 +109,6 @@ Inter-VLAN routing allows controlled communication between departments while mai
 
 ---
 
-# 🚀 Getting Started
-
-## 1️⃣ Clone the Repository
-
-```bash
-git clone https://github.com/<your-username>/ccn-hotel-connectivity-system.git
-```
-
----
-
-## 2️⃣ Open the Project
-
-Open the `.pkt` file using:
-
-* **Cisco Packet Tracer 8.x or later**
-
----
 
 ## 3️⃣ Explore Configurations
 
@@ -140,18 +123,6 @@ Review configurations for:
 
 ---
 
-## 4️⃣ Run the Simulation
-
-Test:
-
-* Device connectivity
-* DHCP assignment
-* OSPF route exchange
-* SSH remote access
-* Wireless communication
-* Port security enforcement
-
----
 
 # ✅ Testing & Verification
 
@@ -166,15 +137,6 @@ The following tests were successfully verified:
 
 ---
 
-# 📄 Project Documentation
-
-Complete project design, implementation methodology, configurations, and testing results are available in:
-
-```text
-final_report.docx
-```
-
----
 
 # 📷 Suggested Repository Additions
 
