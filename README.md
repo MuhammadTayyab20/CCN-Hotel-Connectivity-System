@@ -1,157 +1,53 @@
-# 🏨 CCN Hotel Connectivity System
+# CCN — Hotel Connectivity System 🏨
 
-A secure, scalable, and multi-floor hotel network infrastructure designed and simulated using Cisco Packet Tracer. The project connects multiple hotel departments across three floors using VLAN segmentation, dynamic routing, DHCP services, wireless connectivity, and enforced security policies — meeting the operational and security requirements of a modern hotel environment.
-
----
-
-## 📌 Overview
-
-The **CCN Hotel Connectivity System** is a three-floor enterprise-style networking project developed to simulate a real-world hotel communication infrastructure.
-
-Each floor contains multiple departments connected through dedicated VLANs to ensure secure and efficient communication. The network supports:
-
-* Dynamic IP address allocation
-* Inter-floor communication through OSPF routing
-* Secure remote device management via SSH
-* Port security enforcement
-* Wireless connectivity for mobile and wireless devices
-* Inter-VLAN communication and shared resource access
-
-The entire network was designed and tested in **Cisco Packet Tracer**.
+A secure, scalable multi-floor hotel network designed and simulated in **Cisco Packet Tracer**. The network segments traffic by floor/department using VLANs, routes between them with OSPF, automates addressing with DHCP, and hardens access with SSH and port security.
 
 ---
 
-# ✨ Key Features
+## 🎯 Project Goal
 
-## 🔹 VLAN Segmentation
-
-Each department operates within its own VLAN to:
-
-* Reduce broadcast traffic
-* Improve network performance
-* Enhance security and isolation
+Design an enterprise-grade network for a multi-floor hotel where each floor (and service area such as reception, guest rooms, admin, and management) is isolated for security and performance, while still allowing controlled communication across the building.
 
 ---
 
-## 🔹 OSPF Dynamic Routing
+## 🧩 Key Features
 
-Routers on all three floors exchange routes dynamically using **OSPF**, enabling efficient and scalable inter-floor communication.
-
----
-
-## 🔹 DHCP Services
-
-Routers function as DHCP servers and automatically assign IP addresses to all devices based on their VLAN.
+- **VLANs** — separate broadcast domains per floor/department for isolation and easier management
+- **OSPF routing** — dynamic routing between VLANs and network segments
+- **DHCP** — automatic IP assignment to client devices
+- **SSH** — secure remote management of switches and routers (no plain Telnet)
+- **Port security** — restricts which devices can connect to switch ports, preventing unauthorized access
 
 ---
 
-## 🔹 SSH Remote Access
+## 🛠️ Tools Used
 
-Secure remote management is configured on all routers using **SSH** for encrypted administrative access.
+- **Cisco Packet Tracer** 
+---
+
+## 🗺️ Topology
+
+> Add a screenshot of your Packet Tracer topology here, plus a short note on the IP/VLAN scheme.
+>
+> Example:
+> | VLAN | Purpose | Subnet |
+> |------|---------|--------|
+> | 10 | Reception | 192.168.10.0/24 |
+> | 20 | Guest Rooms | 192.168.20.0/24 |
+> | 30 | Admin | 192.168.30.0/24 |
 
 ---
 
-## 🔹 Port Security
+## ▶️ How to Open
 
-The IT department switch implements **sticky MAC port security**, allowing access only to the authorized **Test-PC** device.
-
----
-
-## 🔹 Wi-Fi Connectivity
-
-Wireless access points provide connectivity for:
-
-* Laptops
-* Smartphones
-* Tablets
-* Wireless printers
-
-Each wireless network is mapped to its respective VLAN.
+1. Open the `.pkt` file in **Cisco Packet Tracer**.
+2. Explore the device configurations (CLI on each router/switch).
+3. Use **Simulation mode** to trace packets between VLANs.
 
 ---
 
-## 🔹 Inter-VLAN Routing
+## 📌 Possible Improvements
 
-Inter-VLAN routing allows controlled communication between departments while maintaining segmentation and security policies.
-
----
-
-# 🏗️ Network Layout
-
-| Floor     | Departments                  | Devices                       |
-| --------- | ---------------------------- | ----------------------------- |
-| 1st Floor | Reception, Store, Logistics  | Router, Switch, PCs, Printers |
-| 2nd Floor | Finance, HR, Sales/Marketing | Router, Switch, PCs, Printers |
-| 3rd Floor | Admin, IT                    | Router, Switch, PCs, Printers |
-
-### 📡 Infrastructure Details
-
-* Each floor contains:
-
-  * One dedicated router
-  * One switch
-  * Multiple wired and wireless devices
-* Routers are interconnected using **Serial DCE links**
-* Unique subnets are assigned for inter-router communication
-
----
-
-# 🛠️ Technologies Used
-
-* Cisco Packet Tracer
-* VLANs
-* Inter-VLAN Routing
-* OSPF Routing Protocol
-* DHCP
-* SSH
-* Port Security (Sticky MAC)
-* Wireless Access Points
-
----
-
-
-## 3️⃣ Explore Configurations
-
-Review configurations for:
-
-* Routers
-* Switches
-* VLANs
-* DHCP
-* OSPF
-* Security policies
-
----
-
-
-# ✅ Testing & Verification
-
-The following tests were successfully verified:
-
-* ✔️ Devices across VLANs communicate through OSPF routing
-* ✔️ DHCP correctly assigns IP addresses per VLAN
-* ✔️ SSH remote login works on all routers
-* ✔️ Unauthorized devices are blocked by port security
-* ✔️ Wireless devices connect successfully
-* ✔️ Cross-VLAN printing functions correctly
-
----
-
-
-# 📷 Suggested Repository Additions
-
-To make this project stand out on GitHub, consider adding:
-
-* 📸 Network topology screenshots
-* 🎥 Demo video/GIF
-* 📑 Configuration files
-* 📊 IP addressing table
-* 🧠 VLAN/subnet design diagrams
-
----
-
-# ⭐ Project Status
-
-✅ Completed
-📚 Academic Networking Project
-🛡️ Focused on Secure Enterprise Network Design
+- [ ] Add a firewall / ASA for internet edge security
+- [ ] Add a guest Wi-Fi VLAN with captive portal
+- [ ] Add redundancy (HSRP / EtherChannel)
